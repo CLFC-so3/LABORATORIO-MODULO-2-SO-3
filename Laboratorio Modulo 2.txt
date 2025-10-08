@@ -1,0 +1,64 @@
+primer video 
+
+sudo dnf update
+sudo dnf upgrade –refresh
+sudo dnf repolist 
+
+sudo dnf repolist –all
+
+git clone https://github.com/aristocratos/bashtop.git
+cd bashtop
+sudo make install
+sudo make uninstall
+
+sudo dnf autoremove -y
+
+-----------------------------
+
+segundo video 
+
+sudo su
+crontab -e
+(dentro del crontab)
+0 23 * * * dnf upgrade -y && dnf autoremove -y
+0 3 * * * 0 /sbin/reboot
+:wq
+
+at now + 1 minute 
+rm -rf /tmp/*
+ctrl + d
+atq
+ls /tmp
+
+----------------------------------
+
+tercer video 
+
+lsblk
+fdisk /dev/sdb
+N
+P
+Enter
+Enter
+Enter
+W
+
+mkfs.ext4 /dev/sdb1
+cd Escritorio
+mkdir SO3Adrian
+mount /dev/sdb1 /home/carlos/Escritorio/SO3Adrian
+cd SO3Adrian
+vi AdrianAlcantara.txt
+
+Carlos Luis Feliz Catano
+20250892
+Sistemas Operativos 3
+Esc
+:wq
+
+cd ..
+umount /dev/sdb1
+mount /dev/sdb1 /mnt
+ls /mnt
+cat AdrianAlcantara.txt
+
